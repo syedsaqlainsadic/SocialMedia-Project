@@ -1,0 +1,9 @@
+extends layouts/main-layout.pug  
+block content
+    +navbar(userDetails)
+    .container 
+        h1 User Profile Settings
+        p Welcome #{userDetails.name}
+        p #{userDetails.email} 
+
+        img(src=userDetails.profilePic, alt="User Profile Picture" width="100px")

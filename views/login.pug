@@ -1,0 +1,19 @@
+extends layouts/form-layout.pug  
+block content 
+    .form-container 
+        h1 Welcome Back
+        p Login to Access Your Account..
+        form#frm(method="POST")
+            p.errorMessage #{errorMessage}
+            .row 
+                input#username(type="text" required="" name="username")
+                label Email or Username
+            .row 
+                input#password(type="password" required="" name="password")
+                label Password
+            .row 
+                button(type="submit") Login Now 
+        p Not a Member? 
+            a(href="/register") Signup Here 
+            br
+            a(href="#") Forget Password ? 
